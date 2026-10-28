@@ -4,7 +4,7 @@ import {SITE} from './config/site';
 import ThankYou from './components/ThankYou';
 const offerPrice=Math.round((SITE.mrp*(100-SITE.discountPercent))/100);
 const wa='https://wa.me/919876543210';
-const sheetEndpoint=import.meta.env.VITE_GOOGLE_SHEETS_URL||'';
+const sheetEndpoint=import.meta.env.VITE_GOOGLE_SHEETS_URL||'https://script.google.com/macros/s/AKfycbwpDvRx-cLh_9zZR8fV_njGNO1s9L3aLFDaBHecDwCh7OpIYKIDK6bxg4cCrI1YgvhGUQ/exec';
 function Brand(){return <a href="#top" className="brand" aria-label="Swasth Bharat Herbal home"><img src="/logo-cropped.png" alt="Swasth Bharat Herbal" width="257" height="361"/></a>}
 function Bottle(){return <div className="bottle-scene"><img className="product-photo" src="/product.png" alt="Swasth Bharat Herbal Stone Nil ? 30 tablets" width="500" height="500" decoding="async"/></div>}
 
