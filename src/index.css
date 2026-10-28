@@ -581,6 +581,26 @@ header nav a:hover,header nav a:focus-visible{color:#781813;background:#fff2d4}
  .order-form h3{font-size:20px}
 }
 @media(max-width:380px){.price-card{min-height:108px;padding-inline:14px}.price-card strong{font-size:35px}.discount{width:54px;height:54px}}
+@media(max-width:800px){
+ .order-art{display:flex;height:270px;align-items:center;justify-content:center;overflow:hidden;margin-bottom:-8px}
+ .order-art .bottle-scene{width:330px;height:500px;transform:scale(.52);transform-origin:center}
+ .order-art .product-photo{width:145%;max-width:none;height:auto;max-height:100%;object-fit:contain}
+}
+@media(max-width:380px){
+ .order-art{height:245px}
+ .order-art .bottle-scene{transform:scale(.48)}
+}
+.order-inline-product{display:none}
+@media(max-width:800px){
+ .order-grid>.order-art{display:none}
+ .order-inline-product{display:flex;align-items:center;justify-content:center;width:100%;height:260px;margin:8px auto 12px;overflow:hidden}
+ .order-inline-product .bottle-scene{width:330px;height:500px;transform:scale(.52);transform-origin:center}
+ .order-inline-product .product-photo{width:145%;max-width:none;height:auto;max-height:100%;object-fit:contain}
+}
+@media(max-width:380px){
+ .order-inline-product{height:235px;margin-block:6px 10px}
+ .order-inline-product .bottle-scene{transform:scale(.47)}
+}
 
 /* Add a stronger visual focal point to the mobile offer without extra copy. */
 .price-card{position:relative;overflow:hidden;border:1px solid #f5d783;background:radial-gradient(ellipse at 100% 0,#ffe39a80,transparent 38%),linear-gradient(135deg,#fffef9 0%,#fff2d3 100%);box-shadow:inset 0 1px #fff,0 8px 20px #25050338}
@@ -648,6 +668,13 @@ footer{border-top:3px solid #d0a044;background:linear-gradient(145deg,#4d080a,#7
  .price-card>span:last-child{font-size:12px}
  .discount{top:11px;right:12px;width:58px;height:58px;border-color:#fff9e7;box-shadow:0 0 0 3px #f4b93b,0 6px 14px #a7470e4a;font-size:16px}
 }
+.offer-highlight{position:relative;isolation:isolate;overflow:hidden;align-self:center;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:11px;min-height:190px;padding:22px 14px;border:2px solid #f4cd65;border-radius:14px;background:radial-gradient(circle at 50% 12%,#fff9df 0,#ffefbd 54%,#ffe39a 100%);color:#58110f;text-align:center;box-shadow:inset 0 1px #fff,0 0 0 4px #f2b83d28,0 9px 22px #25050335}
+.offer-highlight::before{content:"";position:absolute;inset:7px;border:1px solid #edc4518a;border-radius:9px;pointer-events:none;z-index:-1}
+.offer-kicker{font-size:15px;font-weight:700;line-height:1.4;color:#5b3820}
+.offer-highlight>strong{font-size:clamp(29px,3vw,38px);font-weight:900;line-height:1.15;color:#a40e18;text-shadow:0 2px 0 #f4d78a;letter-spacing:-.5px}
+.offer-gift{display:flex;align-items:center;justify-content:center;gap:8px;padding:7px 11px;border:1px solid #b7d5ac;border-radius:999px;background:#eff7e9;color:#245e35;font-size:14px;font-weight:800;line-height:1.3}
+.offer-gift .icon{width:19px;height:19px;color:#268349}
+@media(max-width:560px){.offer-highlight{min-height:150px;padding:18px 12px;gap:9px}.offer-kicker{font-size:14px}.offer-highlight>strong{font-size:32px}.offer-gift{font-size:13px;padding:6px 10px}}
 /* Blend green herbal leaves into the original wine-red hero background. */
 .hero{
  background-color:#620b0d;
@@ -709,3 +736,100 @@ footer{border-top:3px solid #d0a044;background:linear-gradient(145deg,#4d080a,#7
  .real-report-preview{max-width:390px}
 }
 @media(prefers-reduced-motion:reduce){.lab-badges span{animation:none}}
+
+/* Put a larger product image directly below the mobile discount offer. */
+@media(max-width:800px){
+ .offer-grid{display:grid;grid-template-columns:1fr}
+ .order-inline-product{display:flex;align-items:center;justify-content:center;width:100%;height:310px;margin:2px auto 4px;overflow:hidden}
+ .order-inline-product .bottle-scene{width:390px;height:560px;transform:scale(.66);transform-origin:center}
+ .order-inline-product .product-photo{width:145%;max-width:none;height:auto;max-height:100%;object-fit:contain}
+}
+@media(max-width:380px){
+ .order-inline-product{height:285px;margin-block:0 2px}
+ .order-inline-product .bottle-scene{transform:scale(.61)}
+}
+
+/* Make the mobile bottle and discount offer the clearest focal points. */
+@media(max-width:800px){
+ .order-inline-product{height:365px;margin:0 auto 6px}
+ .order-inline-product .bottle-scene{width:420px;height:600px;transform:scale(.82)}
+ .offer-highlight{min-height:172px;padding:20px 14px;gap:11px;border-width:3px;box-shadow:inset 0 1px #fff,0 0 0 5px #f2b83d45,0 12px 28px #25050348}
+ .offer-kicker{font-size:16px}
+ .offer-highlight>strong{padding:7px 17px;border-radius:12px;background:linear-gradient(120deg,#a90d16,#df301e);color:#fff6d8;font-size:clamp(38px,11vw,46px);line-height:1.12;letter-spacing:-.7px;text-shadow:0 2px 0 #7c1012;box-shadow:0 4px 0 #790b11,0 0 0 3px #fff0bb,0 7px 14px #8a22064d}
+ .offer-gift{font-size:14px}
+}
+@media(max-width:380px){
+ .order-inline-product{height:335px}
+ .order-inline-product .bottle-scene{transform:scale(.75)}
+ .offer-highlight>strong{font-size:38px}
+}
+
+/* Render the real transparent product cutout cleanly on mobile without crop or stretch. */
+@media(max-width:800px){
+ .order-inline-product .bottle-scene{width:min(100%,390px);height:100%;transform:none}
+ .order-inline-product .product-photo{display:block;width:100%;height:100%;max-width:100%;max-height:100%;object-fit:contain}
+}
+@media(max-width:380px){.order-inline-product{height:320px}}
+
+/* Prevent the mobile bottle from touching or clipping against its frame. */
+@media(max-width:800px){
+ .order-inline-product{height:390px;padding:14px 0 8px;margin:4px auto 8px;overflow:visible}
+ .order-inline-product .bottle-scene{width:min(100%,380px);height:360px;transform:none}
+ .order-inline-product .product-photo{width:100%;height:100%;max-width:100%;max-height:100%;object-fit:contain}
+}
+@media(max-width:380px){.order-inline-product{height:350px}.order-inline-product .bottle-scene{height:320px}}
+
+/* Scientist photo beside the lab quality details. */
+.lab-doctor-link{display:block;flex:0 0 min(48%,320px);width:min(48%,320px);height:205px;overflow:hidden;border:1px solid #e6d8bd;border-radius:12px;background:#f3eee3;box-shadow:0 6px 18px #54341d1c}
+.lab-doctor-photo{display:block;width:100%;height:100%;object-fit:cover;object-position:center 42%}
+@media(max-width:560px){.lab-bottom{flex-direction:column}.lab-doctor-link{flex:0 0 auto;width:100%;max-width:390px;height:220px}}
+
+/* Enlarge the Indian doctor's laboratory photo in the left lab column. */
+.lab-bottom{flex-direction:column;align-items:flex-start;gap:14px}
+.lab-doctor-link{flex:0 0 auto;width:100%;max-width:520px;height:300px}
+.lab-doctor-photo{object-position:center 38%}
+@media(max-width:560px){.lab-bottom{align-items:center}.lab-doctor-link{width:100%;max-width:420px;height:260px}}
+
+/* Mark the licensed doctor photo as illustrative, not a product endorsement. */
+.lab-doctor-link{position:relative}
+.lab-doctor-link::after{content:"??????????? ?????";position:absolute;left:10px;bottom:10px;padding:5px 9px;border:1px solid #ffffffb8;border-radius:999px;background:#fffdf0e8;color:#4d3326;font-size:12px;font-weight:700;box-shadow:0 2px 8px #0002}
+
+/* Remove the incorrectly encoded overlay label from the doctor photo. */
+.lab-doctor-link::after{content:none;display:none}
+
+/* 30-day money-back assurance near the order offer. */
+.money-back-guarantee{display:grid;grid-template-columns:84px 92px minmax(0,1fr);align-items:center;gap:12px;margin-top:18px;padding:15px 16px;border:1px solid #e6c887;border-radius:14px;background:linear-gradient(110deg,#fffdf7,#fff2d8);box-shadow:0 6px 18px #35090520;color:#4e2618}
+.guarantee-seal{display:grid;place-content:center;gap:2px;width:76px;height:76px;border:3px solid #9d1b1c;border-radius:50%;outline:1px dashed #9d1b1c;outline-offset:-7px;background:#fff8e9;color:#8e1116;text-align:center;transform:rotate(-8deg)}
+.guarantee-seal span{font-size:19px;font-weight:900;line-height:1}
+.guarantee-seal b{font-size:8px;letter-spacing:.4px}
+.guarantee-days{display:flex;flex-direction:column;align-items:center;line-height:.85;color:#9c731b}
+.guarantee-days strong{font-size:64px;font-weight:900;letter-spacing:-4px;text-shadow:0 2px 0 #f6e5ab}
+.guarantee-days span{font-size:15px;font-weight:900;letter-spacing:2px;color:#651013}
+.guarantee-copy h3{color:#690d10;font-size:19px;line-height:1.3}
+.guarantee-copy p{margin-top:4px;color:#5d4b3e;font-size:13px;line-height:1.45}
+.guarantee-copy small{display:block;margin-top:5px;color:#806d5b;font-size:10px;line-height:1.4}
+@media(max-width:560px){.money-back-guarantee{grid-template-columns:64px 72px minmax(0,1fr);gap:8px;margin-top:14px;padding:12px 10px}.guarantee-seal{width:60px;height:60px;border-width:2px}.guarantee-seal span{font-size:15px}.guarantee-seal b{font-size:6px}.guarantee-days strong{font-size:50px}.guarantee-days span{font-size:12px}.guarantee-copy h3{font-size:15px}.guarantee-copy p{font-size:11px}.guarantee-copy small{font-size:9px}}
+
+/* Highlight the Hindi money-back guarantee beside the order offer. */
+.money-back-guarantee{position:relative;isolation:isolate;overflow:hidden;border:2px solid #dcae40;background:radial-gradient(ellipse at 14% 50%,#ffe6a0 0,transparent 42%),linear-gradient(115deg,#fff8e4,#fffdf5 68%);box-shadow:0 0 0 4px #e7be5533,0 10px 24px #35090538}
+.money-back-guarantee::before{content:"";position:absolute;inset:6px;z-index:-1;border:1px solid #e6bd654d;border-radius:9px;pointer-events:none}
+.guarantee-seal{width:82px;height:82px;border:3px solid #7d1115;outline:1px dashed #a77323;background:radial-gradient(circle,#fff3d2,#f9dfa0);box-shadow:0 3px 10px #69111726}
+.guarantee-days strong{font-size:72px;color:#a47513;text-shadow:0 2px 0 #fff0bd,0 4px 8px #9b6b2433}
+.guarantee-copy h3{display:inline-block;padding:3px 9px;border-radius:6px;background:linear-gradient(90deg,#ffe7a5,#fff3d3);color:#761116;font-size:20px;font-weight:900}
+.guarantee-copy p{color:#432e1f;font-size:14px;font-weight:700}
+.guarantee-copy small{color:#725437;font-size:11px;font-weight:600}
+@media(max-width:560px){.guarantee-seal{width:62px;height:62px}.guarantee-days strong{font-size:54px}.guarantee-copy h3{font-size:15px}.guarantee-copy p{font-size:11px}.guarantee-copy small{font-size:9px}}
+
+/* Stronger, high-contrast focal treatment for the 30-day guarantee. */
+.money-back-guarantee{border:3px solid #f0c85b;border-left:10px solid #8e1016;background:radial-gradient(ellipse at 18% 50%,#ffe39a 0,transparent 45%),linear-gradient(110deg,#fff1c7,#fffdf6 72%);box-shadow:0 0 0 5px #b8791938,0 14px 32px #30060855}
+.money-back-guarantee::before{inset:6px;border-color:#d7a63f88}
+.guarantee-seal{width:88px;height:88px;border:3px solid #ffdf85;outline:2px dashed #7e0e13;outline-offset:-7px;background:radial-gradient(circle at 35% 30%,#ae2522,#690b10);color:#fff1c5;box-shadow:0 0 0 3px #82101630,0 6px 14px #6511164a;transform:rotate(-9deg)}
+.guarantee-seal span{font-size:20px;text-shadow:0 1px 3px #260606}
+.guarantee-seal b{font-size:8px;color:#ffe39a}
+.guarantee-days{padding:6px 9px;border-radius:14px;background:linear-gradient(145deg,#fff7d9,#f8e7b5);box-shadow:inset 0 0 0 1px #e4c876,0 5px 12px #70501a20}
+.guarantee-days strong{font-size:76px;color:#9c1119;text-shadow:0 2px 0 #fff2c2,0 4px 8px #84321736}
+.guarantee-days span{color:#741116;font-size:16px}
+.guarantee-copy h3{padding:7px 11px;border:1px solid #e4bf58;border-radius:8px;background:linear-gradient(110deg,#8d1117,#5d090d);color:#fff3d2;font-size:20px;box-shadow:0 3px 0 #470709,0 5px 10px #51121525}
+.guarantee-copy p{margin-top:8px;color:#3f271c;font-size:14px;font-weight:750}
+.guarantee-copy small{margin-top:7px;color:#715137;font-size:11px;font-weight:650}
+@media(max-width:560px){.guarantee-seal{width:62px;height:62px}.guarantee-seal span{font-size:15px}.guarantee-seal b{font-size:6px}.guarantee-days{padding:5px 4px}.guarantee-days strong{font-size:55px}.guarantee-days span{font-size:12px}.guarantee-copy h3{padding:5px 7px;font-size:14px}.guarantee-copy p{margin-top:6px;font-size:11px}.guarantee-copy small{font-size:9px}}
