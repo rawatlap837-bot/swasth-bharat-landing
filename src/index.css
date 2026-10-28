@@ -216,3 +216,54 @@ img,video,iframe{max-width:100%}
  .hero-copy h1{font-size:clamp(35px,10vw,42px)}.symptoms{grid-template-columns:1fr}.benefit-card ul{grid-template-columns:1fr}
  .offer-grid{grid-template-columns:1fr}.footer-grid{grid-template-columns:1fr}.footer-grid>div:first-child{grid-column:auto}
 }
+/* Center the mobile composition while keeping forms and dense lists readable. */
+@media(max-width:560px){
+ .hero-copy{text-align:center}
+ .hero-copy .eyebrow{justify-content:center;margin-inline:auto}
+ .hero-copy h1,.hero-sub{margin-inline:auto}
+ .hero-features{justify-items:center}
+ .hero-features>div{width:100%;text-align:center}
+ .hero-features p{margin-inline:auto}
+ .hero-copy .actions{margin-inline:auto}
+ .trust-strip{justify-items:center}
+ .trust-strip>div{max-width:100px}
+ .hero-art .bottle-scene{left:50%;transform:translateX(-50%) scale(.66);transform-origin:center bottom}
+ .section-title{text-align:center}
+ .concern-grid{justify-items:center}
+ .symptoms{width:100%;text-align:center}
+ .symptoms>div{justify-content:center;text-align:center}
+ .products h2,.products h3,.products p,.photo-credit{text-align:center}
+ .ingredients{justify-items:center}
+ .product-grid>.product-art{justify-content:center}
+ .benefit-card h3{text-align:center}
+ .benefit-card ul{ text-align:left}
+ .lab-grid>div:first-child{text-align:center}
+ .lab-badges{justify-items:center}
+ .lab-bottom{justify-content:center}
+ .order-copy{text-align:center}
+ .order-form h3,.form-note{text-align:center}
+ .faq> .container>h2{text-align:center}
+ .footer-grid>div{text-align:center}
+ .footer-grid>div>a:not(.brand){justify-content:center}
+ .footer-grid .brand{margin-inline:auto}
+ .footer-grid .footer-order{margin-inline:auto}
+ .fine-print,.copyright{text-align:center}
+}
+
+/* Keep the mobile order actions centered and make compact labels readable. */
+@media(max-width:560px){
+ .hero-copy .actions{justify-content:center}
+ .hero-copy .actions .cta{width:min(100%,380px);justify-content:center;gap:10px}
+ .hero-copy .actions .cta .icon{order:initial;margin-left:0}
+ .hero-features p,.trust-strip>div,.hero-list{font-size:12px;line-height:1.45}
+ .trust-strip>div{max-width:none}
+ .hero-list{width:min(48%,190px)}
+ .mobile-actions{display:grid;grid-template-columns:1fr;justify-items:center;padding:8px 12px calc(8px + env(safe-area-inset-bottom));}
+ .mobile-actions a,.mobile-actions a:nth-child(2),.mobile-actions a:last-child{width:min(100%,480px);min-height:50px;font-size:16px;line-height:1.35;color:#fff;background:linear-gradient(110deg,#138a43,#05652f);border:1px solid #c7f2d5;border-radius:10px;text-shadow:0 1px 2px #003b1b;box-shadow:0 2px 8px #003b1b55}
+ .mobile-actions svg{width:21px;height:21px}
+}
+@media(max-width:380px){
+ .hero-features p,.trust-strip>div,.hero-list{font-size:12px}
+ .hero-copy .actions .cta{font-size:19px}
+ .mobile-actions a,.mobile-actions a:nth-child(2),.mobile-actions a:last-child{font-size:15px}
+}
