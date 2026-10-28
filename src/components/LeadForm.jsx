@@ -36,7 +36,6 @@ export default function LeadForm() {
         आपका नाम *
         <input
           className={INPUT_STYLE}
-          placeholder="जैसे- अमित कुमार"
           value={values.name}
           onChange={(e) => setField("name", e.target.value)}
         />
@@ -48,7 +47,6 @@ export default function LeadForm() {
           className={INPUT_STYLE}
           inputMode="numeric"
           maxLength={10}
-          placeholder="जैसे- 9876543210"
           value={values.mobile}
           onChange={(e) => setField("mobile", e.target.value.replace(/\D/g, ""))}
         />

@@ -1,6 +1,15 @@
+import {useEffect} from 'react';
 import Icon from './ui/Icon';
 
 export default function ThankYou(){
+  useEffect(()=>{
+    try{
+      if(sessionStorage.getItem('stoneNilLeadSubmitted')!=='1')return;
+      sessionStorage.removeItem('stoneNilLeadSubmitted');
+      window.fbq?.('trackCustom','ThankYouPageView');
+    }catch{}
+  },[]);
+
   return (
     <main className="thankyou-page">
       <section className="thankyou-card" aria-labelledby="thankyou-title">
