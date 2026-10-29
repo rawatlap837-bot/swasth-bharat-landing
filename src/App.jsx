@@ -2,6 +2,7 @@
 import {useState} from 'react';
 import {SITE} from './config/site';
 import ThankYou from './components/ThankYou';
+const GOOGLE_SHEETS_URL='https://script.google.com/macros/s/AKfycbzANMgdrLkdecjv97yscYDWVpnwtL-fc17mw3eybiobPFdWksmGaKqrISaaaYl97KT_/exec';
 const offerPrice=Math.round((SITE.mrp*(100-SITE.discountPercent))/100);
 function Brand(){return <a href="#top" className="brand" aria-label="Swasth Bharat Herbal home"><img src="/logo-cropped.png" alt="Swasth Bharat Herbal" width="257" height="361"/></a>}
 function Bottle(){return <div className="bottle-scene"><img className="product-photo" src="/product.png" alt="Swasth Bharat Herbal Stone Nil ? 30 tablets" width="500" height="500" decoding="async"/></div>}
@@ -31,9 +32,7 @@ setSubmitError('');
 const d=new FormData(e.currentTarget);
 const lead={name:String(d.get('name')||'').trim(),mobile:String(d.get('mobile')||'').trim(),address:String(d.get('address')||'').trim(),product:SITE.productName,source:window.location.href,createdAt:new Date().toISOString()};
 try{
-const response=await fetch('/api/lead',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(lead)});
-const result=await response.json();
-if(!response.ok||!result.ok)throw new Error(result.error||'आपकी जानकारी सेव नहीं हो सकी। कृपया फिर से कोशिश करें।');
+await fetch(GOOGLE_SHEETS_URL,{method:'POST',mode:'no-cors',headers:{'Content-Type':'text/plain;charset=UTF-8'},body:JSON.stringify(lead)});
 window.fbq?.('track','Lead');
 try{sessionStorage.setItem('stoneNilLeadSubmitted','1')}catch{}
 window.location.assign('/thank-you');

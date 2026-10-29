@@ -1,5 +1,5 @@
 const SHEETS_WEB_APP_URL = process.env.GOOGLE_SHEETS_URL ||
-  'https://script.google.com/macros/s/AKfycbwpDvRx-cLh_9zZR8fV_njGNO1s9L3aLFDaBHecDwCh7OpIYKIDK6bxg4cCrI1YgvhGUQ/exec';
+  'https://script.google.com/macros/s/AKfycbzANMgdrLkdecjv97yscYDWVpnwtL-fc17mw3eybiobPFdWksmGaKqrISaaaYl97KT_/exec';
 
 export default async function handler(req, res) {
   if (req.method !== 'POST') {
