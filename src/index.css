@@ -848,3 +848,4 @@ footer{border-top:3px solid #d0a044;background:linear-gradient(145deg,#4d080a,#7
 .thankyou-card>.cta{width:min(100%,330px);min-height:52px;margin:0 auto;border-radius:10px;font-size:17px}
 .thankyou-order-link{display:block;margin-top:16px;color:#741113;font-size:14px;font-weight:700;text-decoration:underline;text-underline-offset:3px}
 @media(max-width:480px){.thankyou-card{padding:30px 20px 26px;border-radius:16px}.thankyou-message{font-size:14px}}
+.form-error{margin:8px 0;color:#9f1d17;background:#fff0ed;border:1px solid #edb8b3;border-radius:8px;padding:10px 12px;font-size:14px}.fields button:disabled{opacity:.72;cursor:wait}
