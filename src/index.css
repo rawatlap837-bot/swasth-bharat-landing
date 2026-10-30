@@ -646,19 +646,19 @@ footer{border-top:3px solid #d0a044;background:linear-gradient(145deg,#4d080a,#7
  .fine-print{margin-top:22px;text-align:left;font-size:11px}
  .copyright{text-align:center;font-size:10px;padding-top:12px}
 }
-/* Add visible herbal leaves to the red order section without reducing contrast. */
+/* Reuse the leafy hero background behind the order form section. */
 .order{
  background-color:#650b0d;
  background-image:
-  linear-gradient(90deg,rgba(48,7,8,.2) 0%,rgba(69,7,10,.48) 34%,rgba(82,7,12,.91) 66%,#650b0d 100%),
-  linear-gradient(0deg,rgba(42,5,8,.52),rgba(103,16,17,.22)),
+  linear-gradient(90deg,rgba(48,7,8,.44) 0%,rgba(69,7,10,.62) 34%,rgba(82,7,12,.88) 66%,rgba(101,11,13,.96) 100%),
+  linear-gradient(0deg,rgba(42,5,8,.6),rgba(103,16,17,.3)),
   url("https://commons.wikimedia.org/wiki/Special:FilePath/Vitex_negundo_leaves.jpg");
  background-size:cover,cover,cover;
  background-position:center,center,left center;
  background-repeat:no-repeat;
 }
 @media(max-width:800px){
- .order{background-image:linear-gradient(90deg,rgba(55,7,9,.66),rgba(82,7,12,.89)),linear-gradient(0deg,rgba(42,5,8,.52),rgba(103,16,17,.22)),url("https://commons.wikimedia.org/wiki/Special:FilePath/Vitex_negundo_leaves.jpg");background-position:center,center,24% center}
+ .order{background-image:linear-gradient(90deg,rgba(55,7,9,.58),rgba(82,7,12,.83)),linear-gradient(0deg,rgba(42,5,8,.55),rgba(103,16,17,.28)),url("https://commons.wikimedia.org/wiki/Special:FilePath/Vitex_negundo_leaves.jpg");background-size:cover,cover,cover;background-position:center,center,24% center}
 }
 @media(min-width:801px){
  .price-card{min-height:190px;padding:56px 14px 14px;justify-content:flex-start;border:2px solid #ffd45d;background:radial-gradient(ellipse at 52% 80%,#ffe16f 0%,#fff1c4 43%,transparent 72%),linear-gradient(145deg,#fffefa,#ffefbf);box-shadow:inset 0 1px #fff,0 0 0 4px #f2b83d36,0 9px 24px #25050345}
@@ -675,7 +675,7 @@ footer{border-top:3px solid #d0a044;background:linear-gradient(145deg,#4d080a,#7
 .offer-gift{display:flex;align-items:center;justify-content:center;gap:8px;padding:7px 11px;border:1px solid #b7d5ac;border-radius:999px;background:#eff7e9;color:#245e35;font-size:14px;font-weight:800;line-height:1.3}
 .offer-gift .icon{width:19px;height:19px;color:#268349}
 @media(max-width:560px){.offer-highlight{min-height:150px;padding:18px 12px;gap:9px}.offer-kicker{font-size:14px}.offer-highlight>strong{font-size:32px}.offer-gift{font-size:13px;padding:6px 10px}}
-/* Blend green herbal leaves into the original wine-red hero background. */
+/* Restore the original Vitex negundo leafy hero background. */
 .hero{
  background-color:#620b0d;
  background-image:
@@ -687,7 +687,7 @@ footer{border-top:3px solid #d0a044;background:linear-gradient(145deg,#4d080a,#7
  background-repeat:no-repeat;
 }
 @media(max-width:800px){
- .hero{background-image:linear-gradient(90deg,rgba(66,9,8,.42),rgba(82,8,12,.88)),linear-gradient(0deg,rgba(46,5,8,.35),rgba(96,26,8,.1)),url("https://commons.wikimedia.org/wiki/Special:FilePath/Vitex_negundo_leaves.jpg");background-position:center,center,24% center}
+ .hero{background-image:linear-gradient(90deg,rgba(66,9,8,.42),rgba(82,8,12,.88)),linear-gradient(0deg,rgba(46,5,8,.35),rgba(96,26,8,.1)),url("https://commons.wikimedia.org/wiki/Special:FilePath/Vitex_negundo_leaves.jpg");background-size:cover,cover,cover;background-position:center,center,24% center}
 }
 /* Keep the desktop price and discount badge separate inside the offer card. */
 @media(min-width:801px){
